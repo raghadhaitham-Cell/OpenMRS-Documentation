@@ -34,14 +34,23 @@ The team follows these steps:
 5. Propose improvements based on the initial findings.
 
 The analysis distinguishes between confirmed information and areas that still require further investigation.
-
 ## 4. Documentation Gap Analysis Table
 
-| Documentation Source | Existing Evidence | Status | Identified Gap | Proposed Improvement |
+| Documentation Source | Evidence / Location | Status | Identified Gap | Proposed Improvement |
 |---|---|---|---|---|
-| README.md | Provides general information about OpenMRS Core, project setup, repository structure, and development resources. | Available | The general overview may not provide enough detail about the internal relationships between selected components. | Add focused architecture descriptions and component relationship diagrams. |
-| AUTHORIZATION_MIGRATION.md | Documents changes related to authorization migration. | Available | The broader relationships between authorization components and the overall system architecture require further investigation. | Add a technical explanation of the relevant authorization components and their interactions. |
-| JUNIT5_MIGRATION.md | Describes the migration from JUnit 4 to JUnit 5. | Available | The migration document does not, by itself, provide a complete overview of the overall testing strategy. | Prepare additional documentation explaining the testing structure and relevant testing practices. |
+| README.md | OpenMRS Core root README. Includes project introduction, build instructions, repository structure, and developer resources. | Available | More focused explanations of relationships between internal components may be useful. | Prepare a focused architecture overview with component diagrams. |
+| AUTHORIZATION_MIGRATION.md | OpenMRS Core `doc/AUTHORIZATION_MIGRATION.md`. Covers authorization migration information. | Available | Further explanation may be needed to connect migration changes with the wider authorization architecture. | Document relevant authorization components and their interactions. |
+| JUNIT5_MIGRATION.md | OpenMRS Core `doc/JUNIT5_MIGRATION.md`. Covers migration from JUnit 4 to JUnit 5. | Available | The migration guide does not replace a complete overview of the testing strategy. | Prepare supplementary documentation about testing organization and practices. |                                              ## 4.1 Evidence References
+
+The following official OpenMRS resources were used to support the initial documentation review:
+
+1. [OpenMRS Core README](https://github.com/openmrs/openmrs-core/blob/master/README.md)
+
+2. [Authorization Migration Guide](https://github.com/openmrs/openmrs-core/blob/master/doc/AUTHORIZATION_MIGRATION.md)
+
+3. [JUnit 5 Migration Guide](https://github.com/openmrs/openmrs-core/blob/master/doc/JUNIT5_MIGRATION.md)
+
+These references provide the evidence used to identify the documentation areas reviewed in this analysis.         
 
 ## 5. Evidence-Based Findings
 
