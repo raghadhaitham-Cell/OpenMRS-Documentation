@@ -4,7 +4,7 @@
 
 This repository contains the documentation deliverables for the OpenMRS Core project as part of Milestone 1 (M1).
 
-The project focuses on reviewing the existing documentation, identifying documentation gaps, and proposing improvements to support better understanding and maintenance of the system.
+The project focuses on reviewing the existing documentation, identifying documentation gaps, and proposing improvements to support a better understanding and maintenance of the system.
 
 ## Project Objectives
 
@@ -18,13 +18,14 @@ The project focuses on reviewing the existing documentation, identifying documen
 
 | File Name | Description |
 |---|---|
+| README.md | Provides an overview of the project and its documentation deliverables. |
 | Documentation Plan (PDF) | Presents the documentation plan, scope, objectives, and approach. |
-| Documentation_Gap_Analysis.md | Identifies potential documentation gaps and proposed improvements. |
+| Documentation_Gap_Analysis.md | Identifies documentation gaps and proposed improvements. |
 | Team_Task_and_Contribution_Distribution.docx | Describes team tasks and contribution distribution. |
 
 ## Documentation Sources Reviewed
 
-The initial review includes:
+The initial review includes the following OpenMRS Core documentation files:
 
 - README.md
 - AUTHORIZATION_MIGRATION.md
@@ -32,11 +33,11 @@ The initial review includes:
 
 ## Documentation Standards
 
-IEEE 1016 is selected as the reference standard for software design description documentation.
+IEEE 1016 is selected as the reference standard for software design description documentation. It provides guidance for organizing and presenting software design information.
 
 ## Team Contributions
 
-The team members collaborate on reviewing existing documentation, identifying gaps, preparing documentation deliverables, and organizing the project repository.
+Team members collaborate on reviewing existing documentation, identifying documentation gaps, preparing the documentation deliverables, and organizing the project repository. Further details are provided in the Team Task and Contribution Distribution document.
 
 ## Milestone
 
@@ -44,4 +45,4 @@ The team members collaborate on reviewing existing documentation, identifying ga
 
 ## Conclusion
 
-This repository organizes the documentation deliverables for the OpenMRS Core project and provides a foundation for documenting identified gaps and proposed improvements.
+This repository organizes the documentation deliverables for the OpenMRS Core project and provides a foundation for identifying documentation gaps and proposing improvements.
