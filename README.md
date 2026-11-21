@@ -13,9 +13,13 @@ The project focuses on reviewing the existing documentation, identifying documen
 - Analyze the available technical documentation.
 - Propose improvements to documentation quality and organization.
 - Prepare a structured documentation plan.
-
 ## Repository Contents
 
+| File | Description |
+|---|---|
+| [Documentation Gap Analysis](Documentation_Gap_Analysis.md) | Documentation gaps and analysis |
+| [Team Task and Contribution Distribution](Team_Task_and_Contribution_Distribution.docx) | Team responsibilities and task distribution |
+| [Documentation Plan PDF](التوثيق_بعد_حذف_الصفحات_الزائدة.pdf) | Final documentation plan |
 | File Name | Description |
 |---|---|
 | README.md | Provides an overview of the project and its documentation deliverables. |
