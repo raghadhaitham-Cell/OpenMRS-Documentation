@@ -40,7 +40,7 @@ The analysis distinguishes between confirmed information and areas that still re
 |---|---|---|---|---|
 | README.md | OpenMRS Core root README. Includes project introduction, build instructions, repository structure, and developer resources. | Available | More focused explanations of relationships between internal components may be useful. | Prepare a focused architecture overview with component diagrams. |
 | AUTHORIZATION_MIGRATION.md | OpenMRS Core `doc/AUTHORIZATION_MIGRATION.md`. Covers authorization migration information. | Available | Further explanation may be needed to connect migration changes with the wider authorization architecture. | Document relevant authorization components and their interactions. |
-| JUNIT5_MIGRATION.md | OpenMRS Core `doc/JUNIT5_MIGRATION.md`. Covers migration from JUnit 4 to JUnit 5. | Available | The migration guide does not replace a complete overview of the testing strategy. | Prepare supplementary documentation about testing organization and practices. |                                              ## 4.1 Evidence References
+| JUNIT5_MIGRATION.md | OpenMRS Core `doc/JUNIT5_MIGRATION.md`. Covers migration from JUnit 4 to JUnit 5. | Available | The migration guide does not replace a complete overview of the testing strategy. | Prepare supplementary documentation about testing organization and practices.                                                                                                                                                                                                                     ## 4.1 Evidence References
 
 The following official OpenMRS resources were used to support the initial documentation review:
 
