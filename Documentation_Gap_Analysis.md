@@ -2,149 +2,139 @@
 
 ## 1. Introduction
 
-This document presents a documentation gap analysis of the OpenMRS Core project. The purpose is to review the available technical documentation, identify areas that require additional explanation, and propose improvements to make the system easier to understand and maintain.
+This document presents an initial documentation gap analysis of the OpenMRS Core project.
 
-The analysis focuses on the OpenMRS Core architecture, selected Java source code components, developer documentation, and available technical resources.
+The purpose of this analysis is to review selected existing documentation sources, identify areas where additional technical explanations may be needed, and propose improvements to support a better understanding of the system.
 
-The team uses existing OpenMRS documentation and selected source code files as references to evaluate the current documentation coverage.
+The analysis focuses on three documentation files available in the OpenMRS Core repository:
 
-## 2. Objectives of the Gap Analysis
+- README.md
+- AUTHORIZATION_MIGRATION.md
+- JUNIT5_MIGRATION.md
 
-The main objectives are:
+## 2. Objectives
 
-- Identify the technical documentation currently available.
-- Review the information provided by official OpenMRS resources.
-- Examine selected source code components.
-- Identify incomplete or unclear technical explanations.
-- Determine areas that require additional documentation.
-- Suggest practical improvements for future documentation activities.
+The main objectives of this analysis are:
 
-## 3. Documentation Review Method
+- Review the selected OpenMRS documentation sources.
+- Identify the information provided by each document.
+- Evaluate the documentation coverage.
+- Identify areas requiring further explanation or investigation.
+- Propose practical documentation improvements.
+- Establish a foundation for future documentation activities.
 
-The team follows a structured approach to evaluate the available documentation.
+## 3. Review Methodology
 
-The review process includes:
+The team follows these steps:
 
-1. Identifying official OpenMRS documentation sources.
-2. Reviewing the information available in each source.
-3. Examining selected Java source code files.
-4. Comparing available information with the project's documentation needs.
-5. Identifying unclear or insufficiently detailed areas.
-6. Proposing improvements based on the identified gaps.
+1. Identify the selected documentation files.
+2. Review the information and topics covered by each file.
+3. Record the available documentation evidence.
+4. Identify areas that may require additional explanations.
+5. Propose improvements based on the initial findings.
 
-The analysis distinguishes between documentation that is already available and project-specific explanations that require further development.
+The analysis distinguishes between confirmed information and areas that still require further investigation.
 
 ## 4. Documentation Gap Analysis Table
 
-The following table summarizes the documentation sources reviewed, the available evidence, identified gaps, and proposed improvements.
-
 | Documentation Source | Existing Evidence | Status | Identified Gap | Proposed Improvement |
 |---|---|---|---|---|
-| OpenMRS README | Provides general project information, repository structure, and development resources. | Available | More focused explanations of the selected components may be needed. | Add a project-specific overview of the selected components. |
-| Architecture Documentation | Describes the main architectural layers, including Presentation, Service, and Data Access layers. | Available | The relationships between the selected Java classes are not fully explained in the project documentation. | Prepare a focused architecture diagram showing the selected components and their interactions. |
-| Technical Overview | Explains the overall OpenMRS architecture, backend technologies, APIs, and modular structure. | Available | The connection between the general architecture and the selected source code files requires further explanation. | Connect the architecture description to the selected Java classes. |
-| Developer Documentation | Provides development guides, API resources, testing information, and technical references. | Available | Additional explanations may be needed to help new developers understand the selected project components. | Prepare a short technical guide for the components examined by the team. |
-| AdministrationService.java | Selected for studying administration service operations. | Requires Further Review | The project documentation needs a clearer explanation of the service responsibilities and related components. | Document the main responsibilities and relationships of the administration service. |
-| AdministrationServiceImpl.java | Selected to examine the implementation of administration service operations. | Requires Further Review | The relationship between the service interface and its implementation needs further explanation. | Describe the implementation responsibilities and its interaction with other components. |
-| AdministrationDAO.java | Selected to study data access operations. | Requires Further Review | The role of the data access abstraction needs to be explained in relation to the service layer. | Document the responsibilities of the DAO component and its relationship with the service layer. |
-| HibernateAdministrationDAO.java | Selected to examine Hibernate-based data access implementation. | Requires Further Review | The connection between the DAO implementation and database persistence needs additional explanation. | Describe how the selected DAO implementation handles persistence operations. |
-| GlobalProperty.java | Selected to examine a domain object used in OpenMRS Core. | Requires Further Review | Its relationship with the common OpenMRS object structure needs clearer documentation. | Explain its role and relationship with the related base classes. |
-| BaseOpenmrsObject.java and OpenmrsObject.java | Selected to examine common OpenMRS object structures and interfaces. | Requires Further Review | Their roles in the selected domain model require a clearer explanation. | Document their responsibilities and relationships with selected domain classes. |
-| Testing Documentation | Official developer resources include testing-related documentation. | Available | The testing approach relevant to the selected components requires further investigation. | Review relevant testing resources and document applicable testing information. |
+| README.md | Provides general information about OpenMRS Core, project setup, repository structure, and development resources. | Available | The general overview may not provide enough detail about the internal relationships between selected components. | Add focused architecture descriptions and component relationship diagrams. |
+| AUTHORIZATION_MIGRATION.md | Documents changes related to authorization migration. | Available | The broader relationships between authorization components and the overall system architecture require further investigation. | Add a technical explanation of the relevant authorization components and their interactions. |
+| JUNIT5_MIGRATION.md | Describes the migration from JUnit 4 to JUnit 5. | Available | The migration document does not, by itself, provide a complete overview of the overall testing strategy. | Prepare additional documentation explaining the testing structure and relevant testing practices. |
 
-**Note:** "Requires Further Review" means that the team has identified an area requiring additional examination. It does not mean that the corresponding source code or documentation is missing from the complete OpenMRS project.
+## 5. Evidence-Based Findings
 
-## 5. Main Identified Documentation Gaps
+### 5.1 README.md
 
-Based on the initial review, the team identified the following areas that need additional attention:
+**Evidence:**
 
-### 5.1 Architecture Relationships
+The README file provides general project information and guidance for developers. It also introduces repository organization and development-related resources.
 
-OpenMRS provides documentation describing its main architectural layers. However, the project requires a more focused explanation of how the selected Java components interact.
+**Finding:**
+
+The README is useful as an entry point for understanding the project. However, additional explanations may be needed to understand the relationships between specific internal components.
 
 **Proposed Improvement:**
 
-Prepare an architecture diagram illustrating the relationship between the administration service, service implementation, data access components, and database persistence.
+Prepare a focused architecture overview containing component descriptions and a diagram illustrating their relationships.
 
-### 5.2 Source Code Explanation
+### 5.2 AUTHORIZATION_MIGRATION.md
 
-The selected Java classes provide an initial understanding of the system structure. However, their individual responsibilities and relationships should be documented more clearly.
+**Evidence:**
 
-**Proposed Improvement:**
+The document focuses on authorization migration and provides information related to changes in this area.
 
-Prepare short descriptions of the selected classes, explaining their responsibilities and their relationships with other components.
+**Finding:**
 
-### 5.3 Data Access and Persistence
-
-The architecture documentation explains the role of the Data Access Layer and the use of Hibernate.
-
-However, the project needs a more specific explanation of the selected DAO components.
+The migration information is useful, but additional investigation is needed to understand how the authorization components relate to the broader OpenMRS architecture.
 
 **Proposed Improvement:**
 
-Document the relationship between AdministrationDAO, HibernateAdministrationDAO, and the persistence mechanism.
+Document the responsibilities of the relevant authorization components and explain their interactions with other system components.
 
-### 5.4 Domain Model Relationships
+### 5.3 JUNIT5_MIGRATION.md
 
-The selected domain classes provide an example of the common object structure used in OpenMRS.
+**Evidence:**
 
-Additional explanations are needed to clarify their relationships and responsibilities.
+The document describes the migration from JUnit 4 to JUnit 5.
 
-**Proposed Improvement:**
+**Finding:**
 
-Prepare a simple class relationship diagram showing GlobalProperty, BaseOpenmrsObject, and OpenmrsObject.
-
-### 5.5 Developer Guidance
-
-Official developer resources provide useful information about working with OpenMRS.
-
-However, the project would benefit from a short guide explaining the specific components examined during this stage.
+The document provides migration-related information. However, a migration guide should not be treated as a complete description of the system's overall testing structure.
 
 **Proposed Improvement:**
 
-Create project-specific documentation that helps developers understand the selected files and their roles within OpenMRS Core.
+Prepare supplementary testing documentation describing the testing organization and relevant testing practices.
 
-## 6. Proposed Documentation Improvements
+## 6. Main Identified Documentation Gaps
 
-Based on the identified gaps, the team recommends the following improvements:
+Based on the initial review, the following areas require further investigation:
 
-1. Prepare a clear architecture diagram showing the selected system components.
-2. Add descriptions of the responsibilities of the selected Java classes.
-3. Explain the relationships between service and data access components.
-4. Document the role of Hibernate in the selected data access implementation.
-5. Prepare a class relationship diagram for the selected domain model.
-6. Organize the technical documentation into clearly structured sections.
-7. Include references to official OpenMRS documentation.
-8. Keep the documentation consistent with the actual source code.
+1. Detailed relationships between internal system components.
+2. A focused explanation of the authorization architecture.
+3. A broader overview of the testing structure.
+4. Clearer connections between general project documentation and specific technical components.
 
-## 7. Limitations of the Analysis
+These findings represent areas for improvement rather than confirmation that the corresponding documentation does not exist.
 
-This gap analysis represents an initial review of selected OpenMRS Core documentation sources and source code components.
+## 7. Proposed Documentation Improvements
 
-The analysis does not claim to cover the entire OpenMRS repository or identify every possible documentation gap.
+The team proposes the following improvements:
 
-Some findings require further verification through additional source code examination and comparison with official technical resources.
+| Improvement | Description | Priority |
+|---|---|---|
+| Architecture Overview | Prepare diagrams explaining selected component relationships. | High |
+| Authorization Documentation | Explain relevant authorization components and their interactions. | High |
+| Testing Documentation | Provide additional information about the testing structure. | Medium |
+| Documentation Organization | Organize technical explanations into clear and consistent sections. | Medium |
 
-The team will continue reviewing the selected components during the next project stages.
+## 8. Limitations
 
-## 8. Conclusion
+This analysis represents an initial review of three selected documentation files.
 
-The documentation gap analysis provides an initial understanding of the available documentation for OpenMRS Core and identifies areas where additional explanations would improve the project's technical documentation.
+It does not cover every document, source code file, or technical resource available in the OpenMRS Core project.
 
-The review shows that OpenMRS already provides useful architectural and developer resources. However, the selected source code components require more focused explanations to clarify their responsibilities and relationships.
+Additional investigation is required before making conclusions about the completeness of the overall project documentation.
 
-By addressing these areas, the team aims to produce clearer, more organized, and more useful technical documentation.
+The findings will be reviewed and updated as the team examines additional technical resources.
 
-The findings of this analysis will guide the next documentation activities and support the development of a more complete architectural understanding of OpenMRS Core.
+## 9. Conclusion
 
-## 9. References
+The initial documentation review shows that OpenMRS Core provides useful documentation covering general project information, authorization migration, and testing framework migration.
 
-The following official resources were used as references during the documentation review:
+However, additional focused explanations may improve understanding of component relationships, authorization architecture, and testing organization.
 
-1. OpenMRS Architecture Documentation.
-2. OpenMRS Technical Overview.
-3. OpenMRS Developer Documentation.
-4. OpenMRS Core Repository and README.
-5. OpenMRS Developer Manual.
+The proposed improvements will guide the next stages of the documentation project and help establish clearer and more organized technical documentation.
 
-These resources provide background information about the system architecture, development structure, technical components, and available documentation.
+## 10. References
+
+1. OpenMRS Core Repository – README.md.
+2. OpenMRS Core Repository – AUTHORIZATION_MIGRATION.md.
+3. OpenMRS Core Repository – JUNIT5_MIGRATION.md.
+4. OpenMRS Official Documentation – Technical Overview.
+
+Official Resources:
+
+- https://github.com/openmrs/openmrs-core
+- https://openmrs.atlassian.net/wiki/spaces/docs/pages/25476856/Technical+Overview
